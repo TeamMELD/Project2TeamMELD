@@ -6,12 +6,14 @@ module.exports = function(app) {
     db.Report.findAll({}).then(function(data) {
       res.render("index", {
         msg: "Welcome!",
-        examples: dbExamples
+        examples: data
       });
     });
   });
+  
+  //Load report page
 
-  // Load example page and pass in an example by id
+  // Load search page
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
       res.render("example", {
@@ -19,6 +21,11 @@ module.exports = function(app) {
       });
     });
   });
+
+  //Load search page for zipcode
+
+  //load search page for articles related to issue
+  
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

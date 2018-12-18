@@ -1,5 +1,3 @@
-// TODO delete this
-
 var db = require("../models");
 
 module.exports = function(app) {
@@ -11,15 +9,16 @@ module.exports = function(app) {
   });
 
   // get specific report:
-  app.get("/api/reports/:id", function (req, res){
+  app.get("/api/reports/:id", function(req, res) {
     db.Report.findOne({
       where: {
-        id: req.params.id,
-      }.then(function(data){
-        res.json(data)
-      })
-    })
-  })
+        id: req.params.id
+      }
+    }).then(function(data) {
+      res.json(data);
+    });
+  });
+
   // Create a new report
   app.post("/api/reports", function(req, res) {
     db.Report.create(req.body).then(function(data) {
