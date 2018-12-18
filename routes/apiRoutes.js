@@ -1,3 +1,5 @@
+// TODO delete this
+
 var db = require("../models");
 
 module.exports = function(app) {
