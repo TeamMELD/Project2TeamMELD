@@ -9,10 +9,10 @@ module.exports = function(app) {
   });
 
   // get specific report:
-  app.get("/api/reports/:id", function(req, res) {
-    db.Report.findOne({
+  app.get("/api/reports/:category", function(req, res) {
+    db.Report.findAll({
       where: {
-        id: req.params.id
+        category: req.params.category
       }
     }).then(function(data) {
       res.json(data);
