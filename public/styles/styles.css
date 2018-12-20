@@ -3,7 +3,12 @@
 }
 
 body {
-  background-color: #dbfbe0;
+  background-color: #dbfbe0 !important;
+  color: #374897;
+}
+
+.navbar-brand, .navbar-toggler, .nav, .collapse, .navbar-expand-lg, .navbar-light, .bg-light {
+  background-color: #dbfbe0 !important;
 }
 
 #banner-logo {
@@ -23,3 +28,46 @@ h5{
 }
 
 
+.container {
+  background: #fff;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 768px){
+.container {
+    max-width: 720px;
+}}
+
+@media (min-width: 992px) {
+.container {
+    max-width: 960px;
+}}
+
+.card {
+  border: 1px solid #2C7873;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+  width: 33%;
+}
+
+footer {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #2C7873;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+#tagline {
+  margin-left: auto;
+  margin-right: auto;
+}

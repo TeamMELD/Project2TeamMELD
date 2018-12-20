@@ -1,9 +1,14 @@
-// var db = require("../models");
+var db = require("../models");
 
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    res.render("index");
+    db.Report.findAll({}).then(function(reportdb) {
+      res.render("index", {
+        msg: "Your source to search and report environmental concerns.",
+        report: reportdb
+      });
+    });
   });
 
   //load report page
