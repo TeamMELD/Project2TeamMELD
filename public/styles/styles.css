@@ -12,3 +12,14 @@ body {
   margin-right: auto;
   width: 50%;
 }
+
+#accordion {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+h5{
+  padding-left: 50px;
+}
+
+
