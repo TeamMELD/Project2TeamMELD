@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    // submit button for reports
-    $("#submitButton").on("click", function (event) {
+    console.log("ok it's running");
+    $("form.report-form").on("submit", function (event) {
         event.preventDefault();
 
         //create variables to store value from input
-        let report = {
+        let newReport = {
             username: $("#username").val().trim(),
             address: $("#address").val().trim(),
             city: $("#city").val().trim(),
@@ -12,13 +12,16 @@ $(document).ready(function () {
             zipcode: $("#zipcode").val().trim(),
             violation_description: $("#violationDescription").val().trim(),
             categories: $("#category").val().trim(),
-            rating: $("rating").val().trim()
+            rating: $("#rating").val().trim()
         };
-        console.log(report)
+        console.log(newReport);
 
-        $.post("/api/reports", report)
-            .then(function () {
-                console.log("On database woohoo!")
-            })
-    });
-});
+        $.ajax("/api/reports", {
+            type: "POST",
+            data: newReport
+        }).then(function () {
+            console.log("New report is on database woohoo!");
+            location.reload();
+        });
+    }); 
+})

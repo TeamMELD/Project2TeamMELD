@@ -25,13 +25,14 @@
             </form>
         </div>
         <div class="col-6">
-            <form>
+            <form class="report-form">
                 <div class="form-group">
                     <label for="username">Violation Description</label>
-                    <textarea class="form-control" id="violationDescription" rows="4"></textarea> </div>
+                    <textarea class="form-control" id="violationDescription" rows="6" placeholder="Message.."></textarea> </div>
                 <div class="form-group">
                     <label for="category">Category</label>
                     <select class="form-control" id="category">
+                        <option>Please Choose One</option>
                         <option>Chemical waste</option>
                         <option>Air pollution</option>
                         <option>Water pollution</option>
@@ -41,6 +42,7 @@
                 <div class="form-group">
                     <label for="category">Rating</label>
                     <select class="form-control" id="rating">
+                        <option>Please Choose One</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -57,4 +59,4 @@
 
 </div>
 
-<script src="/public/js/report.js"></script>
+<script src="/js/reports.js"></script>

@@ -21,6 +21,7 @@ module.exports = function(app) {
 
   // Create a new report
   app.post("/api/reports", function(req, res) {
+    console.log("in reports(POST)");
     db.Report.create(req.body).then(function(data) {
       res.json(data);
     });
