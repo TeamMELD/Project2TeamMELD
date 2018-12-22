@@ -18,14 +18,7 @@ body {
   width: 50%;
 }
 
-#accordion {
-  padding-left: 50px;
-  padding-right: 50px;
-}
 
-h5{
-  padding-left: 50px;
-}
 
 
 .container {
@@ -36,7 +29,7 @@ h5{
   padding: 20px;
 }
 
-@media (min-width: 768px){
+/* @media (min-width: 768px){
 .container {
     max-width: 720px;
 }}
@@ -44,7 +37,7 @@ h5{
 @media (min-width: 992px) {
 .container {
     max-width: 960px;
-}}
+}} */
 
 .card {
   border: 1px solid #2C7873;

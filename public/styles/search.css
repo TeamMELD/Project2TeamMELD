@@ -1,0 +1,12 @@
+#accordion-layout{
+    margin: 0%;
+    width: 100%;
+}
+
+#headingOne, #headingTwo, #headingThree{
+    margin: 0%;
+}
+
+h5{
+    margin-left: 25px;
+}
