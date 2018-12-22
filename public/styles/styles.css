@@ -8,7 +8,7 @@ body {
 }
 
 .navbar-brand, .navbar-toggler, .nav, .collapse, .navbar-expand-lg, .navbar-light, .bg-light {
-  background-color: #dbfbe0 !important;
+  background-color: #dbfbe0!important;
 }
 
 #banner-logo {
@@ -18,10 +18,6 @@ body {
   width: 50%;
 }
 
-#accordion {
-  padding-left: 50px;
-  padding-right: 50px;
-}
 
 h5{
   padding-left: 50px;
@@ -36,7 +32,7 @@ h5{
   padding: 20px;
 }
 
-@media (min-width: 768px){
+/*@media (min-width: 768px){
 .container {
     max-width: 720px;
 }}
@@ -44,15 +40,10 @@ h5{
 @media (min-width: 992px) {
 .container {
     max-width: 960px;
-}}
+}}*/
 
-.card {
-  border: 1px solid #2C7873;
-  border-radius: 5px;
-  display: block;
-  margin: 10px auto;
-  width: 33%;
-}
+
+
 
 footer {
   display: block;
@@ -65,6 +56,12 @@ footer {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
   color: #fff;
+}
+
+hr {
+  background-color: #2C7873;
+  height: 2px;
+  width: 85%;
 }
 
 #tagline {
