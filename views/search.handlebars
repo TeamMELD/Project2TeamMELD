@@ -1,20 +1,34 @@
-<br>
+<head>
+      <!-- Style to fix the issue of text extending past card length -->
+  <style>
+    .card-body a {
+      word-break: break-all;
+    }
+
+    .articleHeadline {
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
 
 <br>
 
-<h5>Search Enviromental Issues In Your Area</h5>
+<br>
+
+<h5>Search Environmental Issues In Your Area</h5>
 
 
 <div id="accordion">
     <div class="card">
         <div class="card-header" id="headingOne">
             <form>
-            <div class="form-group float-left">
-                <label for="exampleInputPassword1">Enter your Zip Code</label>
-                <input type="Zip" class="form-control" id="InputZip" placeholder="Zip Code">
-            </div>
-            
-        </form>
+                <div class="form-group float-left">
+                    <label for="exampleInputPassword1">Enter your Zip Code</label>
+                    <input type="Zip" class="form-control" id="InputZip" placeholder="Zip Code">
+                </div>
+
+            </form>
             <h5 class="mb-0">
 
                 <button class="btn btn-link float-right" data-toggle="collapse" data-target="#collapseOne"
@@ -23,7 +37,7 @@
                 </button>
             </h5>
         </div>
-        
+
 
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
@@ -38,7 +52,7 @@
     </div>
     <div class="card">
         <div class="card-header" id="headingTwo">
-            
+
             <h5 class="mb-0">
                 <button class="btn btn-link collapsed " data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
                     aria-controls="collapseTwo">
@@ -46,15 +60,119 @@
                 </button>
             </h5>
         </div>
-        
+
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
             <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <!-- Main Bootstrap Search -->
+                <div class="container">
+
+                    <!-- Jumbotron for Title -->
+                    <div class="jumbotron" style="background-color: #20315A ; color: white;">
+                        <h1 class="text-center">
+                            <strong>
+                                <i class="fa fa-newspaper-o"></i> New York Times Search</strong>
+                        </h1>
+                    </div>
+
+                    <!-- Row for Searching New York Times -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <br>
+                            <!-- First card is for handling the search parameters -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>
+                                        <i class="fa fa-list-alt"></i> Search Parameters</strong>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Here we create an HTML Form for handling the inputs-->
+                                    <form role="form">
+
+                                        <!-- Here we create the text box for capturing the search term-->
+                                        <div class="form-group">
+                                            <label for="search">Search Term:</label>
+                                            <input type="text" class="form-control" id="search-term">
+                                        </div>
+
+                                        <!-- Here we capture the number of records that the user wants to retrieve  -->
+                                        <div class="form-group">
+                                            <label for="pwd">Number of Records to Retrieve:</label>
+                                            <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+                                                <option selected value="1">1</option>
+                                                <!-- Setting the option for 5 as default -->
+                                                <option value="5" selected>5</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Here we capture the Start Year Parameter-->
+                                        <div class="form-group">
+                                            <label for="start-year">Start Year (Optional):</label>
+                                            <input type="text" class="form-control" id="start-year">
+                                        </div>
+
+                                        <!-- Here we capture the End Year Parameter -->
+                                        <div class="form-group">
+                                            <label for="end-year">End Year (Optional):</label>
+                                            <input type="text" class="form-control" id="end-year">
+                                        </div>
+
+                                        <!-- Here we have our final submit button -->
+                                        <button type="submit" class="btn btn-default" id="run-search">
+                                            <i class="fa fa-search"></i> Search</button>
+                                        <button class="btn btn-default" id="clear-all">
+                                            <i class="fa fa-trash"></i> Clear Results</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- This row will handle all of the retrieved articles -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <br>
+
+                            <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+                            <div class="card">
+
+                                <!-- card Heading for the retrieved articles box -->
+                                <div class="card-header">
+                                    <strong>
+                                        <i class="fa fa-table"></i> Top Articles</strong>
+                                </div>
+
+                                <!-- This main card will hold each of the resulting articles -->
+                                <div class="card-body" id="article-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Region -->
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <!-- Line Break followed by closing -->
+                            <hr>
+                            <h5 class="text-center">
+                                <small>Climate Justice
+                                    <i class="fa fa-heart"></i>
+                                </small>
+                            </h5>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- jQuery JS -->
+                <script src="https://code.jquery.com/jquery.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+                <!-- Code to the JavaScript File -->
+                <script src="../public/js/nytCode.js"></script>
             </div>
         </div>
     </div>

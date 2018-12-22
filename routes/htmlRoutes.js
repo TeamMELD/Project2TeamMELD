@@ -13,7 +13,7 @@ module.exports = function(app) {
 
   //load report page
   app.get("/report", function(req, res) {
-    res.render("./partials/report");
+    res.render("report");
   });
 
   //load search page
