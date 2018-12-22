@@ -8,7 +8,7 @@ body {
 }
 
 .navbar-brand, .navbar-toggler, .nav, .collapse, .navbar-expand-lg, .navbar-light, .bg-light {
-  background-color: #dbfbe0 !important;
+  background-color: #dbfbe0!important;
 }
 
 #banner-logo {
@@ -39,13 +39,6 @@ body {
     max-width: 960px;
 }} */
 
-.card {
-  border: 1px solid #2C7873;
-  border-radius: 5px;
-  display: block;
-  margin: 10px auto;
-  width: 66%;
-}
 
 footer {
   display: block;
@@ -58,6 +51,12 @@ footer {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
   color: #fff;
+}
+
+hr {
+  background-color: #2C7873;
+  height: 2px;
+  width: 85%;
 }
 
 #tagline {
