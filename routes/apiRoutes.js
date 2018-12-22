@@ -1,7 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all report
+  // Get all reports
   app.get("/api/reports", function(req, res) {
     db.Report.findAll({}).then(function(data) {
       res.json(data);

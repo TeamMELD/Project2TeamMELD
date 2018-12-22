@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    console.log("ok it's running");
+    //console.log("ok it's running");
+    //submit form with submit on click button 
     $("form.report-form").on("submit", function (event) {
         event.preventDefault();
 
@@ -14,8 +15,9 @@ $(document).ready(function () {
             categories: $("#category").val().trim(),
             rating: $("#rating").val().trim()
         };
-        console.log(newReport);
+        // console.log(newReport);
 
+        //Ajax call to post report back into the database
         $.ajax("/api/reports", {
             type: "POST",
             data: newReport
