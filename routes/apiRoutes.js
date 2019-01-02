@@ -10,11 +10,24 @@ module.exports = function(app) {
 
   // get specific report:
   app.get("/api/reports/:category", function(req, res) {
+    console.log("category");
     db.Report.findAll({
       where: {
         category: req.params.category
       }
     }).then(function(data) {
+      res.json(data);
+    });
+  });
+
+  app.get("/api/search/location", function(req, res) {
+    console.log("location");
+    db.Report.findAll({
+      where: {
+        zipcode: req.body.zipcode
+      }
+    }).then(function(data) {
+      console.log(data);
       res.json(data);
     });
   });

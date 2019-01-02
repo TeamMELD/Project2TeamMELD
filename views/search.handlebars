@@ -32,31 +32,31 @@
                     <form>
                         <div class="form-row">
                             <div class="col-7">
-                                <input type="text" class="form-control" placeholder="City">
+                                <input type="text" id ="input-city"class="form-control" placeholder="City">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="State">
+                                <input type="text" id = "input-state" class="form-control" placeholder="State">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Zip">
+                                <input type="text" id="input-zip"class="form-control" placeholder="Zip">
                             </div>
                         </div>
                     </form>
                 </div>
 
-                <button type="button" class="btn btn-success">Search </button>
+                <button type="button" id= "search" class="btn btn-success">Search </button>
 
             </div>
 
-            <ul>
-                {{#each reports}}
+            <ul id="search-list" class="search-group">
+                {{#each location}}
                 <li>
-                    <p><span class="label">City:</span> {{this.city}}</p>
+                    <p><span class="search-group-city" data-id="{{this.city}}">City:</span></p>
                     <p><span class="label">State:</span> {{this.State}}</p>
-                    <p><span class="label">zipcode:</span> {{this.zipcode}}</p>
+                    <p><span class="search-group-zip" data-id="{{this.zipcode}}">zipcode:</span></p>
                     <p><span class="label">violation_description:</span> {{this.violation_description}}</p>
 
-                    
+
                 </li>
                 {{/each}}
             </ul>
@@ -88,3 +88,5 @@
 
     </div>
 </div>
+
+<script src="/js/search.js"></script>
