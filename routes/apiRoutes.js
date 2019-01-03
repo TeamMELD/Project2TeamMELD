@@ -21,6 +21,43 @@ module.exports = function(app) {
     });
   });
 
+  // get specific report by address
+  app.get("/search/:address", function(req, res) {
+    db.Report.findAll({
+      where: {
+        zipcode: req.params.address
+      }
+    }).then(function(data) {
+      console.log(data);
+      res.json(data);
+    });
+  });
+
+  // get specific report by state
+  app.get("/search/:state", function(req, res) {
+    db.Report.findAll({
+      where: {
+        state: req.params.state
+      }
+    }).then(function(data) {
+      console.log(data);
+      res.json(data);
+    });
+  });
+
+
+  // get specific report by category
+  app.get("/search/:category", function(req, res) {
+    db.Report.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(function(data) {
+      console.log(data);
+      res.json(data);
+    });
+  });
+
   // Create a new report
   app.post("/api/reports", function(req, res) {
     console.log("in reports(POST)");

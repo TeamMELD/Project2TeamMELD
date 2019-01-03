@@ -8,7 +8,7 @@ $(document).ready(function() {
   var API = {
     getReport: function(zipcode) {
       return $.ajax({
-        url: "/search/:zipcode",
+        url: "/search/" + zipcode,
         type: "GET",
         data: zipcode
       });
