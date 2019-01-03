@@ -20,7 +20,7 @@ module.exports = function(app) {
   app.get("/search", function(req, res) {
     res.render("search");
   });
- 
+
   //load other page
   app.get("/others", function(req, res) {
     res.render("others");
