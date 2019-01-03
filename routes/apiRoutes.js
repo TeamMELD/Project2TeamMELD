@@ -2,29 +2,18 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all reports
-  app.get("/api/reports", function(req, res) {
+  app.get("/search/reports", function(req, res) {
     db.Report.findAll({}).then(function(data) {
       res.json(data);
     });
   });
 
-  // get specific report:
-  app.get("/api/reports/:category", function(req, res) {
-    console.log("category");
+  // get specific report by zipcode
+  app.get("/search/:zipcode", function(req, res) {
+    console.log(req);
     db.Report.findAll({
       where: {
-        category: req.params.category
-      }
-    }).then(function(data) {
-      res.json(data);
-    });
-  });
-
-  app.get("/api/search/location", function(req, res) {
-    console.log("location");
-    db.Report.findAll({
-      where: {
-        zipcode: req.body.zipcode
+        zipcode: req.params.zipcode
       }
     }).then(function(data) {
       console.log(data);
