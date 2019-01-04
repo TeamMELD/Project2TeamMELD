@@ -24,6 +24,15 @@ $(document).ready(function () {
         }).then(function () {
             console.log("New report is on database woohoo!");
             location.reload();
+
         });
-    }); 
-})
+
+    })
+    //open modal after submission
+    $(window).load(function () {
+        $("#submissionModal").modal('show');
+    });
+
+});
+
+

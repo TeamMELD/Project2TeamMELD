@@ -16,7 +16,7 @@ module.exports = function(app) {
         zipcode: req.params.zipcode
       }
     }).then(function(data) {
-      console.log(data);
+      // console.log(data);
       res.json(data);
     });
   });
@@ -28,7 +28,7 @@ module.exports = function(app) {
         address: req.params.address
       }
     }).then(function(data) {
-      console.log(data);
+      // console.log(data);
       res.json(data);
     });
   });
@@ -40,7 +40,7 @@ module.exports = function(app) {
         city: req.params.city
       }
     }).then(function(data) {
-      console.log(data);
+      // console.log(data);
       res.json(data);
     });
   });
@@ -52,7 +52,7 @@ module.exports = function(app) {
         state: req.params.state
       }
     }).then(function(data) {
-      console.log(data);
+      // console.log(data);
       res.json(data);
     });
   });
@@ -60,7 +60,7 @@ module.exports = function(app) {
 
   // Create a new report
   app.post("/api/reports", function(req, res) {
-    console.log("in reports(POST)");
+    // console.log("in reports(POST)");
     db.Report.create(req.body).then(function(data) {
       res.json(data);
     });
