@@ -8,7 +8,7 @@ function buildQueryURL() {
 
   // Begin building an object to contain our API call's query parameters
   // Set the API key
-  var queryParams = { "api-key": "b9f91d369ff59547cd47b931d8cbc56b:0:74623931" };
+  var queryParams = { "api-key": "479bf3fbb46941d681ad92a59fb199b7" };
 
   // Grab text the user typed into the search input, add to the queryParams object
   queryParams.q = $("#search-term")
@@ -75,11 +75,11 @@ function updatePage(NYTData) {
       console.log(headline.main);
       $articleListItem.append(
         "<span class='label label-primary'>" +
-        articleCount +
-        "</span>" +
-        "<strong> " +
-        headline.main +
-        "</strong>"
+          articleCount +
+          "</span>" +
+          "<strong> " +
+          headline.main +
+          "</strong>"
       );
     }
 
@@ -106,7 +106,9 @@ function updatePage(NYTData) {
     }
 
     // Append and log url
-    $articleListItem.append("<a href='" + article.web_url + "'>" + article.web_url + "</a>");
+    $articleListItem.append(
+      "<a href='" + article.web_url + "'>" + article.web_url + "</a>"
+    );
     console.log(article.web_url);
 
     // Append the article
@@ -123,7 +125,7 @@ function clear() {
 // ==========================================================
 
 // .on("click") function associated with the Search Button
-$("#run-search").on("click", function (event) {
+$("#run-search").on("click", function(event) {
   // This line allows us to take advantage of the HTML "submit" property
   // This way we can hit enter on the keyboard and it registers the search
   // (in addition to clicks). Prevents the page from reloading on form submit.
