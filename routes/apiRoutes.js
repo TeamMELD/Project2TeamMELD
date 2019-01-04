@@ -9,7 +9,7 @@ module.exports = function(app) {
   });
 
   // get specific report by zipcode
-  app.get("/search/:zipcode", function(req, res) {
+  app.get("/search/zipcode/:zipcode", function(req, res) {
     console.log(req);
     db.Report.findAll({
       where: {
@@ -22,7 +22,7 @@ module.exports = function(app) {
   });
 
   // get specific report by address
-  app.get("/search/:address", function(req, res) {
+  app.get("/search/address/:address", function(req, res) {
     db.Report.findAll({
       where: {
         address: req.params.address
@@ -34,7 +34,7 @@ module.exports = function(app) {
   });
 
   // get specific report by city
-  app.get("/search/:city", function(req, res) {
+  app.get("/search/city/:city", function(req, res) {
     db.Report.findAll({
       where: {
         city: req.params.city
@@ -46,7 +46,7 @@ module.exports = function(app) {
   });
 
   // get specific report by state
-  app.get("/search/:state", function(req, res) {
+  app.get("/search/state/:state", function(req, res) {
     db.Report.findAll({
       where: {
         state: req.params.state
