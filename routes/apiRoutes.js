@@ -25,7 +25,19 @@ module.exports = function(app) {
   app.get("/search/:address", function(req, res) {
     db.Report.findAll({
       where: {
-        zipcode: req.params.address
+        address: req.params.address
+      }
+    }).then(function(data) {
+      console.log(data);
+      res.json(data);
+    });
+  });
+
+  // get specific report by city
+  app.get("/search/:city", function(req, res) {
+    db.Report.findAll({
+      where: {
+        city: req.params.city
       }
     }).then(function(data) {
       console.log(data);
@@ -45,18 +57,6 @@ module.exports = function(app) {
     });
   });
 
-
-  // get specific report by category
-  app.get("/search/:category", function(req, res) {
-    db.Report.findAll({
-      where: {
-        category: req.params.category
-      }
-    }).then(function(data) {
-      console.log(data);
-      res.json(data);
-    });
-  });
 
   // Create a new report
   app.post("/api/reports", function(req, res) {

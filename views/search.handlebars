@@ -1,18 +1,5 @@
-<!-- not needed - linked to from Main Handlebars
-<link rel="stylesheet" href="styles/search.css" media="screen" title="no title" charset="utf-8">
-
-<br>
-
-<br>
--->
-
-
 
 <div class="container" id="search-container">
-
-    <h6>Search Environmental Issues In Your Area</h6>
-
-
 
     <div id="accordion">
         <div class="card" id="accordion-layout">
@@ -22,7 +9,7 @@
 
                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                         aria-controls="collapseOne">
-                        Search Your Location
+                        Search for Environmental Violation by Location
                     </button>
 
                 </h5>
@@ -30,30 +17,48 @@
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">
-
                     <form>
                         <div class="form-row">
-                            <div class="col-7">
-                                <input type="text" id ="input-city"class="form-control" placeholder="City">
+                            <div class="col-8">
+                                <input type="text" id="input-address" class="form-control" placeholder="Address">
                             </div>
-                            <div class="col">
-                                <input type="text" id = "input-state" class="form-control" placeholder="State">
+                            <div class="col-4">
+                                <button type="button" id="search-address" class="btn btn-success">Search by Address</button>
                             </div>
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <div class="col-8">
+                                <input type="text" id="input-city" class="form-control" placeholder="City">
+                            </div>
+                            <div class="col-4">
+                                <button type="button" id="search-city" class="btn btn-success">Search by City</button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <div class="col-8">
+                                <input type="text" id="input-state" class="form-control" placeholder="State">
+                            </div>
+                            <div class="col-4">
+                                <button type="button" id="search-state" class="btn btn-success">Search by State</button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-row">
                             <div class="col">
-                                <input type="text" id="input-zip"class="form-control" placeholder="Zip">
+                                <input type="text" id="input-zip" class="form-control" placeholder="Zip">
+                            </div>
+                            <div class="col-4">
+                                <button type="button" id="search-zip" class="btn btn-success">Search by Zipcode</button>
                             </div>
                         </div>
                     </form>
                 </div>
+                <ul id="search-list" class="search-group">
 
-                <button type="button" id= "search" class="btn btn-success">Search </button>
-
+                </ul>
             </div>
-
-            <ul id="search-list" class="search-group">
-                
-            </ul>
-
         </div>
 
 
@@ -62,19 +67,27 @@
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
                         aria-expanded="false" aria-controls="collapseTwo">
-                        Search EPA Articles
+                        Search for Environmental Articles
                     </button>
                 </h5>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                 <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                    3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                    laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                    coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
-                    anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                    occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
-                    heard of them accusamus labore sustainable VHS.
+                    <form>
+                        <div class="form-row">
+                            <div class="col-8">
+                                <input type="text" id="input-article" class="form-control" placeholder="Search for Articles Related to Your Environmental Concerns">
+                            </div>
+                            <div class="col-4">
+                                <button type="button" id="search-article" class="btn btn-success">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <ul id="search-article-list" class="search-group">
+
+                </ul>
+                   
                 </div>
             </div>
         </div>
