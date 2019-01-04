@@ -1,13 +1,11 @@
 $(document).ready(function () {
   // Get references to page elements
   var $inputZip = $("#input-zip");
-  var $inputAddress = $("#input-address");
   var $inputCity = $("#input-city");
   var $inputState = $("#input-state");
   var $searchBtnZip = $("#search-zip");
-  var $searchBtnAddress = $("#search-address");
   var $searchBtnCity = $("#search-city");
-   var $searchBtnState = $("#search-state");
+  var $searchBtnState = $("#search-state");
   var $searchList = $("#search-list");
 
   // The API object contains method for the  kind of request we'll make
@@ -20,16 +18,6 @@ $(document).ready(function () {
         });
       }
     };
-
-  var APIAddress = {
-    getReportAddress: function (address) {
-      return $.ajax({
-        url: "/search/address/" + address,
-        type: "GET",
-        data: address
-      });
-    }
-  };
 
   var APICity = {
     getReportCity: function (city) {
@@ -62,10 +50,10 @@ $(document).ready(function () {
 
 
     APIZipCode.getReportZipCode(zipcode).then(function (data) {
-      console.log(data);
+      // console.log(data);
       $searchList.append(`<br> <h3> Search result for ${zipcode} <h3>`)
       data.forEach(function (element) {
-        console.log(element);
+        // console.log(element);
 
         $searchList.append(`<li> 
         <p> Location: ${element.address}, ${element.city}, ${element.state}, ${element.zipcode}<p>
@@ -80,32 +68,6 @@ $(document).ready(function () {
   };
 
   //formSubmit is called whenever we submit an address
-  var formSubmitAddress = function (event) {
-    $searchList.empty();
-    event.preventDefault();
-
-    var address = $inputAddress.val().trim();
-
-
-    APIAddress.getReportAddress(address).then(function (data) {
-      console.log(data);
-      $searchList.append(`<br> <h3> Search result for ${address} <h3>`)
-      data.forEach(function (element) {
-        console.log(element);
-
-        $searchList.append(`<li>
-        <p> Location: ${element.city}, ${element.state}, ${element.zipcode} <p>
-        <p> Violation Catetory: ${element.categories}<p> 
-        <p> Violation Description: ${element.violation_description} <p> </li>`)
-      })
-
-    });
-
-    $inputAddress.val("");
-
-  };
-
-  // //formSubmit is called whenever we submit an address
   var formSubmitCity = function (event) {
     $searchList.empty();
     event.preventDefault();
@@ -114,11 +76,10 @@ $(document).ready(function () {
 
 
     APICity.getReportCity(city).then(function (data) {
-      console.log(data);
+      // console.log(data);
       $searchList.append(`<br> <h3> Search result for ${city} <h3>`)
       data.forEach(function (element) {
-        console.log(element);
-
+        // console.log(element);
         $searchList.append(`<li>
         <p> Location: ${element.address}, ${element.state}, ${element.zipcode} <p>
         <p> Violation Catetory: ${element.categories}<p> 
@@ -140,10 +101,10 @@ $(document).ready(function () {
 
 
     APIState.getReportState(state).then(function (data) {
-      console.log(data);
+      // console.log(data);
       $searchList.append(`<br> <h3> Search result for ${state} <h3>`)
       data.forEach(function (element) {
-        console.log(element);
+        // console.log(element);
 
         $searchList.append(`<li>
         <p> Location: ${element.address}, ${element.city}, ${element.zipcode} <p>
@@ -161,8 +122,6 @@ $(document).ready(function () {
 
   // Add event listeners to the submit 
   $searchBtnZip.on("click", formSubmitZip);
-  $searchBtnAddress.on("click", formSubmitAddress);
   $searchBtnCity.on("click", formSubmitCity);
   $searchBtnState.on("click", formSubmitState);
-
 });

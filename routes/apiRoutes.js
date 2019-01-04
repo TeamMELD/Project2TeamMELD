@@ -10,7 +10,7 @@ module.exports = function(app) {
 
   // get specific report by zipcode
   app.get("/search/zipcode/:zipcode", function(req, res) {
-    console.log(req);
+    // console.log(req);
     db.Report.findAll({
       where: {
         zipcode: req.params.zipcode
