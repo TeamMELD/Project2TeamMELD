@@ -8,11 +8,11 @@
                 </div>
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="address" class="form-control" id="address" placeholder="Address">
+                    <input type="text" class="form-control" id="address" placeholder="Address">
                 </div>
                 <div class="form-group">
                     <label for="city">City</label>
-                    <input type="address" class="form-control" id="city" placeholder="City">
+                    <input type="text" class="form-control" id="city" placeholder="City">
                 </div>
                 <div class="form-group">
                     <label for="state">State</label>
@@ -82,8 +82,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="zipcode">Zipcode</label>
-                    <input type="zipcode" class="form-control" id="zipcode" placeholder="Zipcode">
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text" class="form-control" pattern="[0-9]{5}" maxlength="5" title="Five digit zip code" id="zipcode" placeholder="Zipcode">
                 </div>
             </form>
         </div>
@@ -127,13 +127,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Your submission is successfull</h5>
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Thank you for submitting your report
+        
       </div>
     </div>
   </div>
