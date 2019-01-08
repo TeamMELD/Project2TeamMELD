@@ -26,4 +26,19 @@ h3{
     margin-left: 20px;
 }
   
-  
+#secondContainer{
+    background-color: #dbfbe0;
+}
+
+#video{
+    border-radius: 20px;
+}
+
+#recentReports{
+    border-radius: 20px;
+}
+
+h3{
+    padding-top: 5px; 
+    text-align: center;
+}

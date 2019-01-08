@@ -54,22 +54,22 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container" id="secondContainer">
     <div class="row">
-      <div class="col-6">
+      <div class="col-6" id="video">
         <div class="embed-responsive embed-responsive-16by9" id="video">
           <iframe src="https://www.youtube.com/embed/VFkQSGyeCWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
       </div>
   
-      <div class="col-6">
+      <div class=" card col-6" id="recentReports">
         <h3>Most recent reports:</h3>
         <div>
           {{#each report}}
           <ul>
-            <p>Location: {{this.address}}, {{this.city}}, {{this.state}},{{this.zipcode}}. Description:
-              {{this.violation_description}}</p>
+            Location: {{this.address}}, {{this.city}}, {{this.state}}, {{this.zipcode}}. Description:
+              {{this.violation_description}}
           </ul>
           {{/each}}
         </div>
