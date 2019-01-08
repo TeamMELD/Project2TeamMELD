@@ -1,0 +1,153 @@
+<style>
+    .container{
+    border-radius: 20px;
+    background-color: rgb(226, 235, 233)
+    }
+</style>
+
+<div class="container" id="report-container">
+    <form>
+        <div class="row">
+            <div class="col-6">
+
+                <div class="form-row">
+                    <label for="username">Name</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter Your Name" required>
+                </div>
+                <div class="form-row">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Address" required>
+                </div>
+                <div class="form-ro">
+                    <label for="address">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="City" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <select class="form-control" id="state">
+                        <option>Please Choose A State</option>
+                        <option>AL</option>
+                        <option>AK</option>
+                        <option>AZ</option>
+                        <option>AR</option>
+                        <option>CA</option>
+                        <option>CO</option>
+                        <option>CT</option>
+                        <option>DE</option>
+                        <option>FL</option>
+                        <option>GA</option>
+                        <option>HI</option>
+                        <option>ID</option>
+                        <option>IL</option>
+                        <option>IN</option>
+                        <option>IA</option>
+                        <option>KS</option>
+                        <option>KY</option>
+                        <option>LA</option>
+                        <option>ME</option>
+                        <option>MD</option>
+                        <option>MA</option>
+                        <option>MI</option>
+                        <option>MN</option>
+                        <option>MS</option>
+                        <option>MO</option>
+                        <option>MT</option>
+                        <option>NE</option>
+                        <option>NV</option>
+                        <option>NH</option>
+                        <option>NJ</option>
+                        <option>NM</option>
+                        <option>NY</option>
+                        <option>NC</option>
+                        <option>ND</option>
+                        <option>OH</option>
+                        <option>OK</option>
+                        <option>OR</option>
+                        <option>PA</option>
+                        <option>RI</option>
+                        <option>SC</option>
+                        <option>SD</option>
+                        <option>TN</option>
+                        <option>TX</option>
+                        <option>UT</option>
+                        <option>VT</option>
+                        <option>VA</option>
+                        <option>WA</option>
+                        <option>WA</option>
+                        <option>WV</option>
+                        <option>WI</option>
+                        <option>WY</option>
+                        <option>--US Commonwealth and Territories--</option>
+                        <option>AS</option>
+                        <option>DC</option>
+                        <option>FM</option>
+                        <option>GU</option>
+                        <option>MH</option>
+                        <option>MP</option>
+                        <option>PW</option>
+                        <option>PR</option>
+                        <option>VI</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text" class="form-control" pattern="[0-9]{5}" maxlength="5" title="Five digit zip code"
+                        id="zipcode" placeholder="Zipcode">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="username">Violation Description</label>
+                    <textarea class="form-control" id="violationDescription" rows="4" placeholder="Message.." name="fmessage"
+                        maxlength="500" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select class="form-control" id="category">
+                        <option>Please Choose A Category</option>
+                        <option>Chemical waste</option>
+                        <option>Air pollution</option>
+                        <option>Water pollution</option>
+                        <option>Land pollution</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="category">Rating</label>
+                    <select class="form-control" id="rating">
+                        <option>Please Choose A Rating</option>
+                        <option value="1">1 (least concern)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (most concern)</option>
+                    </select>
+                </div>
+                <button id="submitButton" type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="submissionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/reports.js"></script>
+<script>
+    $("#report").addClass("active");
+</script>

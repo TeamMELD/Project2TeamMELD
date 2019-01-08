@@ -1,0 +1,263 @@
+<link rel="stylesheet" href="/styles/search.css" media="screen" title="no title" charset="utf-8">
+
+<div class="container" id="search-container">
+    <div id="accordion">
+        <div class="card" id="accordion-layout">
+            <div class="card-header" id="headingOne">
+
+                <h5 class="mb-0">
+
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        Search for Environmental Violation by Location
+                    </button>
+
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <!-- Row for Searching New York Times -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- First card is for handling the search parameters -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>
+                                        <i class="fa fa-list-alt"></i> Search Location</strong>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-8">
+                                                <input type="text" id="input-city" class="form-control" placeholder="City">
+                                            </div>
+                                            <div class="col-4">
+                                                <button type="button" id="search-city" class="btn btn-success">Search
+                                                    by City</button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <i>--OR--</i>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-8">
+                                                <select class="form-control" id="input-state">
+                                                    <option>State</option>
+                                                    <option>AL</option>
+                                                    <option>AK</option>
+                                                    <option>AZ</option>
+                                                    <option>AR</option>
+                                                    <option>CA</option>
+                                                    <option>CO</option>
+                                                    <option>CT</option>
+                                                    <option>DE</option>
+                                                    <option>FL</option>
+                                                    <option>GA</option>
+                                                    <option>HI</option>
+                                                    <option>ID</option>
+                                                    <option>IL</option>
+                                                    <option>IN</option>
+                                                    <option>IA</option>
+                                                    <option>KS</option>
+                                                    <option>KY</option>
+                                                    <option>LA</option>
+                                                    <option>ME</option>
+                                                    <option>MD</option>
+                                                    <option>MA</option>
+                                                    <option>MI</option>
+                                                    <option>MN</option>
+                                                    <option>MS</option>
+                                                    <option>MO</option>
+                                                    <option>MT</option>
+                                                    <option>NE</option>
+                                                    <option>NV</option>
+                                                    <option>NH</option>
+                                                    <option>NJ</option>
+                                                    <option>NM</option>
+                                                    <option>NY</option>
+                                                    <option>NC</option>
+                                                    <option>ND</option>
+                                                    <option>OH</option>
+                                                    <option>OK</option>
+                                                    <option>OR</option>
+                                                    <option>PA</option>
+                                                    <option>RI</option>
+                                                    <option>SC</option>
+                                                    <option>SD</option>
+                                                    <option>TN</option>
+                                                    <option>TX</option>
+                                                    <option>UT</option>
+                                                    <option>VT</option>
+                                                    <option>VA</option>
+                                                    <option>WA</option>
+                                                    <option>WA</option>
+                                                    <option>WV</option>
+                                                    <option>WI</option>
+                                                    <option>WY</option>
+                                                    <option>--US Commonwealth and Territories--</option>
+                                                    <option>AS</option>
+                                                    <option>DC</option>
+                                                    <option>FM</option>
+                                                    <option>GU</option>
+                                                    <option>MH</option>
+                                                    <option>MP</option>
+                                                    <option>PW</option>
+                                                    <option>PR</option>
+                                                    <option>VI</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+                                                <button type="button" id="search-state" class="btn btn-success">Search
+                                                    by State</button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <i>--OR--</i>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <input type="text" id="input-zip" class="form-control" placeholder="Zipcode">
+                                            </div>
+                                            <div class="col-4">
+                                                <button type="button" id="search-zip" class="btn btn-success">Search by
+                                                    Zipcode</button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <br>
+                            <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+                            <div class="card">
+
+                                <!-- card Heading for the retrieved articles box -->
+                                <div class="card-header">
+                                    <strong>
+                                        <i class="fa fa-table"></i> Search Results
+                                    </strong>
+                                </div>
+
+                                <!-- This main card will hold each of the resulting articles -->
+                                <div class="card-body">
+                                    <ul id="search-list"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card" id="accordion-layout">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    Search for Environmental Articles
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <!-- Row for Searching New York Times -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- First card is for handling the search parameters -->
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>
+                                    <i class="fa fa-list-alt"></i> Search Parameters</strong>
+                            </div>
+                            <div class="card-body">
+
+                                <!-- Here we create an HTML Form for handling the inputs-->
+                                <form role="form">
+
+                                    <!-- Here we create the text box for capturing the search term-->
+                                    <div class="form-group">
+                                        <label for="search">Search Term:</label>
+                                        <input type="text" class="form-control" id="search-term">
+                                    </div>
+
+                                    <!-- Here we capture the number of records that the user wants to retrieve  -->
+                                    <div class="form-group">
+                                        <label for="pwd">Number of Records to Retrieve:</label>
+                                        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+                                            <option selected value="1">1</option>
+                                            <!-- Setting the option for 5 as default -->
+                                            <option value="5" selected>5</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Here we capture the Start Year Parameter-->
+                                    <div class="form-group">
+                                        <label for="start-year">Start Year (Optional):</label>
+                                        <input type="text" class="form-control" id="start-year">
+                                    </div>
+
+                                    <!-- Here we capture the End Year Parameter -->
+                                    <div class="form-group">
+                                        <label for="end-year">End Year (Optional):</label>
+                                        <input type="text" class="form-control" id="end-year">
+                                    </div>
+
+                                    <!-- Here we have our final submit button -->
+                                    <button type="submit" class="btn btn-success" id="run-search">
+                                        <i class="fa fa-search"></i> Search</button>
+                                    <button class="btn btn-danger" id="clear-all">
+                                        <i class="fa fa-trash"></i> Clear Results</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- This row will handle all of the retrieved articles -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <br>
+
+                        <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+                        <div class="card">
+
+                            <!-- card Heading for the retrieved articles box -->
+                            <div class="card-header">
+                                <strong>
+                                    <i class="fa fa-table"></i> Top Articles</strong>
+                            </div>
+
+                            <!-- This main card will hold each of the resulting articles -->
+                            <div class="card-body" id="article-section">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<!-- Code to the JavaScript Files -->
+<script src="../js/nytCode.js"></script>
+<script src="../js/search.js"></script>
+<script>
+    $("#search").addClass("active");
+</script>

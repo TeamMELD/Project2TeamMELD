@@ -2,7 +2,7 @@
   "development": {
     "username": "teamuser",
     "password": "teammeld",
-    "database": "exampledb",
+    "database": "reportdb",
     "host": "localhost",
     "dialect": "mysql"
   },

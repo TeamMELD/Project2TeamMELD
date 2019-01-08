@@ -1,33 +1,94 @@
+<link rel="stylesheet" href="/styles/index.css" media="screen" title="no title" charset="utf-8">
+<!-- Embed of responsive video -->
+
 <div id="home">
-  <div class="container">
+  <div class="container" id="index-container">
     <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+      <div class="card text-center" id="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Report</h5>
+          <p class="card-text">Report a local issue observed to the database.</p>
+          <a href="/report" class="btn btn-success card-btn">Submit&nbsp; <i class="far fa-file-alt"></i> </a>
+        </div>
+      </div>
+      <div class="card text-center" id="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Search</h5>
+          <p class="card-text">Search for local environmental issues and for articles on environmental topics of
+            concern.</p>
+          <a href="/search" class="btn btn-success">Search&nbsp; <i class="fas fa-search"></i></a>
+        </div>
+      </div>
+      <div class="card text-center" id="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Links</h5>
+          <p class="card-text">Browse links to websites about relevant environmental topics.</p>
+          <a href="/others" class="btn btn-success">More&nbsp;&nbsp;<i class="fas fa-link"></i> </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="secondContainer">
+    <div class="row">
+
+      <div class="col-6">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <iframe id="playvideo" src="https://www.youtube.com/embed/VFkQSGyeCWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe id="playvideo" src="https://www.youtube.com/embed/eRLJscAlk1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe id="playvideo" src="https://www.youtube.com/embed/WkjYfTPTDlg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe id="playvideo" src="https://www.youtube.com/embed/ka6_3TJcCkA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class=" card col-6" id="recentReports">
+        <div class="card-header text-center" id="cardReportheader">
+          <h4>MOST RECENT REPORTS</h4>
+        </div>
+        <div class="card-body player">
+          {{#each report}}
+          <li class="list-group-item"> 
+            <h5>Location: {{this.address}}, {{this.city}}, {{this.state}}, {{this.zipcode}}</h5>
+            <h6>Description: {{this.violation_description}}</h6>
+            <p>{{formatDate this.createdAt day="numeric" month="long" year="numeric" hour="numeric" minute="numeric" }}</p>
+            
+            
           </li>
           {{/each}}
-        </ul>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script>
+  $("#home").addClass("active");
+</script>

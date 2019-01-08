@@ -1,26 +1,34 @@
 var db = require("../models");
+var sequelize = require ("sequelize");
 
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Report.findAll({
+      limit: 5, order:[['createdAt', 'DESC']]
+    }).then(function(reportdb) {
       res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
+        msg: "Your source to search and report environmental concerns.",
+        report: reportdb
       });
     });
   });
-
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  //load report page
+  app.get("/report", function(req, res) {
+    res.render("report");
   });
 
-  // Render 404 page for any unmatched routes
+  //load search page
+  app.get("/search", function(req, res) {
+    res.render("search")
+  });
+
+  //load other page
+  app.get("/others", function(req, res) {
+    res.render("others");
+  });
+
+  //load error page
   app.get("*", function(req, res) {
     res.render("404");
   });
