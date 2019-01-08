@@ -70,13 +70,15 @@
       </div>
       <div class=" card col-6" id="recentReports">
         <div class="card-header text-center" id="cardReportheader">
-          <h3>Most recent reports</h3>
+          <h4>MOST RECENT REPORTS</h4>
         </div>
-        <div class="card-body">
+        <div class="card-body player">
           {{#each report}}
-          <h6 id="list-item-{{this.id}}">Location: {{this.address}}, {{this.city}}, {{this.state}}, {{this.zipcode}}</h6>
-          <p>Description:
-            {{this.violation_description}}</p>
+          <li class="list-group-item"> 
+            <h6>Location: {{this.address}}, {{this.city}}, {{this.state}}, {{this.zipcode}}</h6>
+            <p>Description: {{this.violation_description}}</p>
+            <p>{{this.createdAt}}</p>
+          </li>
           {{/each}}
         </div>
       </div>

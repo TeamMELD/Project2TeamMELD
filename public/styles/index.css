@@ -48,3 +48,15 @@ h3{
 #cardReportheader{
     background-color: rgb(226, 235, 233);
 }
+
+.players {
+    position: absolute;
+    width:100%;
+    height: 180px;    
+    overflow: hidden;
+}
+
+.players > li{
+    position:absolute;    
+    width:100%;
+}
