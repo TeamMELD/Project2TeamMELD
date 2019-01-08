@@ -3,7 +3,9 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Report.findAll({}).then(function(reportdb) {
+    db.Report.findAll({
+      limit: 4
+    }).then(function(reportdb) {
       res.render("index", {
         msg: "Your source to search and report environmental concerns.",
         report: reportdb
