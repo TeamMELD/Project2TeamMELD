@@ -1,7 +1,8 @@
 // require("dotenv").config();
 var express = require("express");
 let exphbs = require("express-handlebars");
-
+var Handlebars     = require('handlebars');
+var HandlebarsIntl = require('handlebars-intl');
 const db = require("./models");
 
 const app = express();
@@ -21,6 +22,7 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+HandlebarsIntl.registerWith(Handlebars);
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);

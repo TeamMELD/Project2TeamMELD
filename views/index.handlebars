@@ -75,9 +75,11 @@
         <div class="card-body player">
           {{#each report}}
           <li class="list-group-item"> 
-            <h6>Location: {{this.address}}, {{this.city}}, {{this.state}}, {{this.zipcode}}</h6>
-            <p>Description: {{this.violation_description}}</p>
-            <p>{{this.createdAt}}</p>
+            <h5>Location: {{this.address}}, {{this.city}}, {{this.state}}, {{this.zipcode}}</h5>
+            <h6>Description: {{this.violation_description}}</h6>
+            <p>{{formatRelative this.createdAt day="numeric" month="long" year="numeric" hour="numeric" minute="numeric" }}</p>
+            
+            
           </li>
           {{/each}}
         </div>
@@ -85,9 +87,9 @@
     </div>
   </div>
 </div>
-</div>
-</div>
 
+<script src="handlebars/dist/handlebars.min.js"></script>
+<script src="handlebars-intl/dist/handlebars-intl.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
   $("#home").addClass("active");
