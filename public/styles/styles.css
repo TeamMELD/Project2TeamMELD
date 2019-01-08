@@ -18,8 +18,8 @@ body {
 .navbar-light,
 .bg-light {
   /*background: #dbfbed; testing transparency*/
-  background: transparent;
-}
+   background:transparent; 
+} 
 
 
 
@@ -28,7 +28,7 @@ body {
 }*/
 
 .navbar-light .navbar-nav .nav-link {
-  color: #fcfcfc;
+  color: rgb(26, 22, 22);
 }
 
 /*.nav-link > .active{
@@ -36,7 +36,7 @@ body {
 }*/
 
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-  color: #374897;
+  color:rgb(13, 40, 158);
 }
 
 
