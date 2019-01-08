@@ -5,7 +5,7 @@ module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     db.Report.findAll({
-      limit: 4, order:[['createdAt', 'DESC']]
+      limit: 5, order:[['createdAt', 'DESC']]
     }).then(function(reportdb) {
       res.render("index", {
         msg: "Your source to search and report environmental concerns.",
