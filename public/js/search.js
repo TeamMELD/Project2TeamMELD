@@ -55,10 +55,12 @@ $(document).ready(function () {
       data.forEach(function (element) {
         // console.log(element);
 
-        $searchList.append(`<li> 
-        <p> Location: ${element.address}, ${element.city}, ${element.state}, ${element.zipcode}<p>
-        <p> Catetory: ${element.categories}<p> 
-        <p> Description: ${element.violation_description} <p> </li>`)
+        $searchList.append(`<br><li> 
+        <h5> Location: ${element.address}, ${element.city}, ${element.state}, ${element.zipcode}<h5>
+        <h6> Violation Catetory: ${element.categories}<h6> 
+        <h6> Violation Description: ${element.violation_description} <h6>
+        <i> ${moment(element.createdAt).format('MMMM Do YYYY, h:mm:ss a')}</i> 
+        </li>`)
       })
 
     });
@@ -80,10 +82,12 @@ $(document).ready(function () {
       $searchList.append(`<h3> Environmental Violation in ${city} <h3>`)
       data.forEach(function (element) {
         // console.log(element);
-        $searchList.append(`<li>
-        <p> Location: ${element.address}, ${element.state}, ${element.zipcode} <p>
-        <p> Violation Catetory: ${element.categories}<p> 
-        <p> Violation Description: ${element.violation_description} <p> </li>`)
+        $searchList.append(`<br><li>
+        <h5> Location: ${element.address}, ${element.state}, ${element.zipcode} <h5>
+        <h6> Violation Catetory: ${element.categories}<h6> 
+        <h6> Violation Description: ${element.violation_description} <h6>
+        <i> ${moment(element.createdAt).format('MMMM Do YYYY, h:mm:ss a')}</i> 
+        </li>`)
       })
 
     });
@@ -106,15 +110,17 @@ $(document).ready(function () {
       data.forEach(function (element) {
         // console.log(element);
 
-        $searchList.append(`<li>
-        <p> Location: ${element.address}, ${element.city}, ${element.zipcode} <p>
-        <p> Violation Catetory: ${element.categories}<p> 
-        <p> Violation Description: ${element.violation_description} <p> </li>`)
+        $searchList.append(`<br><li>
+        <h5> Location: ${element.address}, ${element.city}, ${element.zipcode} <h5>
+        <h6> Violation Catetory: ${element.categories}<h6> 
+        <h6> Violation Description: ${element.violation_description} <h6>
+        <i> ${moment(element.createdAt).format('MMMM Do YYYY, h:mm:ss a')}</i> 
+        </li>`)
       })
 
     });
 
-    $inputCity.val("");
+    $inputState.val("State");
 
   };
 
