@@ -56,30 +56,60 @@
 
   <div class="container" id="secondContainer">
     <div class="row">
-      <div class="col-6" id="video">
-        <div class="embed-responsive embed-responsive-16by9" id="video">
-          <iframe src="https://www.youtube.com/embed/VFkQSGyeCWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
+      {{!-- <div class="col-6" id="video"></div>
+      <div class="embed-responsive embed-responsive-16by9" id="video">
+        <iframe src="https://www.youtube.com/embed/VFkQSGyeCWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
-  
-      <div class=" card col-6" id="recentReports">
-        <h3>Most recent reports:</h3>
-        <div>
-          {{#each report}}
-          <ul>
-            Location: {{this.address}}, {{this.city}}, {{this.state}}, {{this.zipcode}}. Description:
-              {{this.violation_description}}
-          </ul>
-          {{/each}}
+    </div> --}}
+    <div class="col-6">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <iframe id="playvideo" src="https://www.youtube.com/embed/VFkQSGyeCWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="carousel-item">
+            <iframe id="playvideo" src="https://www.youtube.com/embed/eRLJscAlk1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="carousel-item">
+            <iframe id="playvideo" src="https://www.youtube.com/embed/WkjYfTPTDlg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class=" card col-6" id="recentReports">
+      <h3>Most recent reports:</h3>
+      <div>
+        {{#each report}}
+        <ul>
+          Location: {{this.address}}, {{this.city}}, {{this.state}}, {{this.zipcode}}. Description:
+          {{this.violation_description}}
+        </ul>
+        {{/each}}
       </div>
     </div>
   </div>
 </div>
 </div>
+</div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>  
+<script>
   $("#home").addClass("active");
 </script>
