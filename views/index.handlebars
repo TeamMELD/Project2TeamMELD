@@ -77,7 +77,7 @@
           <li class="list-group-item"> 
             <h5>Location: {{this.address}}, {{this.city}}, {{this.state}}, {{this.zipcode}}</h5>
             <h6>Description: {{this.violation_description}}</h6>
-            <p>{{formatRelative this.createdAt day="numeric" month="long" year="numeric" hour="numeric" minute="numeric" }}</p>
+            <p>{{formatDate this.createdAt day="numeric" month="long" year="numeric" hour="numeric" minute="numeric" }}</p>
             
             
           </li>
