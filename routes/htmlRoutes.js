@@ -1,16 +1,18 @@
 var db = require("../models");
+var sequelize = require ("sequelize");
 
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Report.findAll({}).then(function(reportdb) {
+    db.Report.findAll({
+      limit: 4, order:[['createdAt', 'DESC']]
+    }).then(function(reportdb) {
       res.render("index", {
         msg: "Your source to search and report environmental concerns.",
         report: reportdb
       });
     });
   });
-
   //load report page
   app.get("/report", function(req, res) {
     res.render("report");

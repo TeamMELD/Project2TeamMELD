@@ -1,14 +1,16 @@
+<link rel="stylesheet" href="/styles/index.css" media="screen" title="no title" charset="utf-8">
+
 <div id="home">
   <div class="container" id="index-container">
     <div class="row">
-      <div class="card text-center" style="width: 18rem;">
+      <div class="card text-center" id="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Report</h5>
           <p class="card-text">Report a local issue observed to the database.</p>
           <a href="/report" class="btn btn-primary card-btn">Submit Report</a>
         </div>
       </div>
-      <div class="card text-center" style="width: 18rem;">
+      <div class="card text-center" id="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Search</h5>
           <p class="card-text">Search for local environmental issues and for articles on environmental topics of
@@ -16,7 +18,7 @@
           <a href="/search" class="btn btn-primary">Search</a>
         </div>
       </div>
-      <div class="card text-center" style="width: 18rem;">
+      <div class="card text-center" id="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Links</h5>
           <p class="card-text">Browse links to websites about relevant environmental topics.</p>
@@ -48,6 +50,20 @@
           {{/each}}
         </ul>
       </div>-->
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h3>Most recent reports:</h3>
+      <div class="row">
+        <div>
+          {{#each report}}
+          <ul>
+            <p>Location: {{this.address}}, {{this.city}}, {{this.state}},{{this.zipcode}}. Description: {{this.violation_description}}</p>
+          </ul>
+          {{/each}}
+        </div>
+      </div>
     </div>
   </div>
 </div>
