@@ -39,7 +39,7 @@ $(document).ready(function () {
             zipcode: $("#zipcode").val().trim(),
             violation_description: $("#violationDescription").val().trim(),
             categories: $("#category").val().trim(),
-            rating: $("#rating").val().trim()
+            rating: parseFloat($("#rating").val().trim())
         };
        
          console.log(newReport);
