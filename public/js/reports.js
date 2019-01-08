@@ -1,7 +1,7 @@
 $(document).ready(function () {
     //console.log("ok it's running");
     //submit form with submit on click button 
-    $("form.report-form").on("submit", function (event) {
+    $("form").on("submit", function (event) {
         event.preventDefault();
         console.log("In submit")
         //create variables to store value from input
