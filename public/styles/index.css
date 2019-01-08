@@ -17,13 +17,16 @@
 }
   
 #index-container{
-    background-image: url('../images/green_earth.jpg');
+    background-image: url('../images/envi_earth.jpg');
+    /* background-color: lightgreen; */
     width:100%;
     height:100%;
 }
 
 h3{
     margin-left: 20px;
+    padding-top: 5px; 
+    text-align: center;
 }
   
 #secondContainer{
@@ -36,9 +39,5 @@ h3{
 
 #recentReports{
     border-radius: 20px;
-}
-
-h3{
-    padding-top: 5px; 
-    text-align: center;
+    background-color: rgb(226, 235, 233)
 }
