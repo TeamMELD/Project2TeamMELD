@@ -1,0 +1,10 @@
+.btn-primary {
+    background-color: #374897 !important;
+    border: #374897 !important;
+    opacity: 1;
+}
+
+.btn-primary:hover {
+    opacity: 0.75;
+}
+
