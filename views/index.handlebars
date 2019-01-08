@@ -26,82 +26,54 @@
           <a href="/others" class="btn btn-primary">More&nbsp;&nbsp;<i class="fas fa-link"></i> </a>
         </div>
       </div>
-
-      <!--starter 
-      <div class="col-8 offset-2">
-        <h3 id="tagline">{{msg}}</h3>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="search-location-text">Search for a Local Environmental Issue</label>
-            <input type="text" id="search-location" class="form-control" aria-describedby="search-text" placeholder="Enter Zip Code">
-          </div>
-          <div class="form-group">
-            <label for="search-article">Report On Environmental Issue</label>
-            <textarea class="form-control" id="search-info" aria-describedby="search-article" placeholder="Enter Zip Code"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Reported Articles:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>-->
     </div>
   </div>
 
   <div class="container" id="secondContainer">
     <div class="row">
-      {{!-- <div class="col-6" id="video"></div>
-      <div class="embed-responsive embed-responsive-16by9" id="video">
-        <iframe src="https://www.youtube.com/embed/VFkQSGyeCWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-    </div> --}}
-    <div class="col-6">
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <iframe id="playvideo" src="https://www.youtube.com/embed/VFkQSGyeCWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+
+      <div class="col-6">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <iframe id="playvideo" src="https://www.youtube.com/embed/VFkQSGyeCWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe id="playvideo" src="https://www.youtube.com/embed/eRLJscAlk1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe id="playvideo" src="https://www.youtube.com/embed/WkjYfTPTDlg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
           </div>
-          <div class="carousel-item">
-            <iframe id="playvideo" src="https://www.youtube.com/embed/eRLJscAlk1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="carousel-item">
-            <iframe id="playvideo" src="https://www.youtube.com/embed/WkjYfTPTDlg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-    </div>
-    <div class=" card col-6" id="recentReports">
-      <h3>Most recent reports:</h3>
-      <div>
-        {{#each report}}
-        <ul>
-          Location: {{this.address}}, {{this.city}}, {{this.state}}, {{this.zipcode}}. Description:
-          {{this.violation_description}}
-        </ul>
-        {{/each}}
+      <div class=" card col-6" id="recentReports">
+        <div class="card-header text-center" id="cardReportheader">
+          <h3>Most recent reports</h3>
+        </div>
+        <div class="card-body">
+          {{#each report}}
+          <h6 id="list-item-{{this.id}}">Location: {{this.address}}, {{this.city}}, {{this.state}}, {{this.zipcode}}</h6>
+          <p>Description:
+            {{this.violation_description}}</p>
+          {{/each}}
+        </div>
       </div>
     </div>
   </div>
