@@ -51,7 +51,7 @@ $(document).ready(function () {
 
     APIZipCode.getReportZipCode(zipcode).then(function (data) {
       // console.log(data);
-      $searchList.append(`<br> <h3> Search result for ${zipcode} <h3>`)
+      $searchList.append(`<br> <h3> Search results for ${zipcode} <h3>`)
       data.forEach(function (element) {
         // console.log(element);
 
@@ -77,7 +77,7 @@ $(document).ready(function () {
 
     APICity.getReportCity(city).then(function (data) {
       // console.log(data);
-      $searchList.append(`<br> <h3> Search result for ${city} <h3>`)
+      $searchList.append(`<br> <h3> Search results for ${city} <h3>`)
       data.forEach(function (element) {
         // console.log(element);
         $searchList.append(`<li>
@@ -102,7 +102,7 @@ $(document).ready(function () {
 
     APIState.getReportState(state).then(function (data) {
       // console.log(data);
-      $searchList.append(`<br> <h3> Search result for ${state} <h3>`)
+      $searchList.append(`<br> <h3> Search results for ${state} <h3>`)
       data.forEach(function (element) {
         // console.log(element);
 
