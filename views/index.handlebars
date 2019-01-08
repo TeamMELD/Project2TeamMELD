@@ -59,11 +59,7 @@
         <div>
           {{#each report}}
           <ul>
-            {{this.address}}
-            {{this.city}}
-            {{this.state}}
-            {{this.zipcode}}
-            {{this.violation_description}}
+            <p>Location: {{this.address}}, {{this.city}}, {{this.state}},{{this.zipcode}}. Description: {{this.violation_description}}</p>
           </ul>
           {{/each}}
         </div>

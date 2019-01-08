@@ -1,10 +1,11 @@
 var db = require("../models");
+var sequelize = require ("sequelize");
 
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     db.Report.findAll({
-      limit: 4
+      limit: 4, order:[['createdAt', 'DESC']]
     }).then(function(reportdb) {
       res.render("index", {
         msg: "Your source to search and report environmental concerns.",
@@ -12,7 +13,6 @@ module.exports = function(app) {
       });
     });
   });
-
   //load report page
   app.get("/report", function(req, res) {
     res.render("report");
