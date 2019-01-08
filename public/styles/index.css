@@ -1,13 +1,3 @@
-.btn-primary {
-    background-color: #374897 !important;
-    border: #374897 !important;
-    opacity: 1;
-}
-
-.btn-primary:hover {
-    opacity: 0.75;
-}
-
 #card {
     border: 1px solid #2C7873;
     border-radius: 5px;

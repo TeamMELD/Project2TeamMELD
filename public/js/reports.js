@@ -25,6 +25,7 @@ $(document).ready(function () {
             data: newReport
         }).then(function () {
             console.log("New report is on database woohoo!");
+            //open modal after submission
             $("#submissionModal").modal('show');
             $('.modal-title').text('Your submission was successful')
             $('.modal-body').text('Thank you for your report.')
@@ -41,7 +42,7 @@ $(document).ready(function () {
         });
 
     })
-    //open modal after submission
+    
   
 
 });
