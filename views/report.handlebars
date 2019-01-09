@@ -6,26 +6,26 @@
 </style>
 
 <div class="container" id="report-container">
-    <form>
+    <form id="reportForm">
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
 
                 <div class="form-row">
                     <label for="username">Name</label>
-                    <input type="text" class="form-control" id="username" placeholder="Enter Your Name" required>
+                    <input type="text" class="form-control" id="username" name="username" minlength="3" placeholder="Enter Your Name" required>
                 </div>
                 <div class="form-row">
                     <label for="address">Address</label>
-                    <input type="text" class="form-control" id="address" placeholder="Address" required>
+                    <input type="text" class="form-control" id="address" name="address" minlength="3" placeholder="Address" required>
                 </div>
                 <div class="form-ro">
-                    <label for="address">City</label>
-                    <input type="text" class="form-control" id="city" placeholder="City" required>
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" name="city" minlength="2" placeholder="City" required>
                 </div>
                 <div class="form-group">
                     <label for="state">State</label>
-                    <select class="form-control" id="state">
-                        <option>Please Choose A State</option>
+                    <select class="form-control" id="state" name="state" required>
+                        <option value="">Please Choose A State</option>
                         <option>AL</option>
                         <option>AK</option>
                         <option>AZ</option>
@@ -73,7 +73,6 @@
                         <option>VT</option>
                         <option>VA</option>
                         <option>WA</option>
-                        <option>WA</option>
                         <option>WV</option>
                         <option>WI</option>
                         <option>WY</option>
@@ -92,30 +91,30 @@
                 <div class="form-group">
                     <label for="zipcode">Zip Code</label>
                     <input type="text" class="form-control" pattern="[0-9]{5}" maxlength="5" title="Five digit zip code"
-                        id="zipcode" placeholder="Zipcode">
+                        id="zipcode" placeholder="Zipcode" required>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label for="username">Violation Description</label>
-                    <textarea class="form-control" id="violationDescription" rows="4" placeholder="Message.." name="fmessage"
+                    <textarea class="form-control" id="violationDescription" rows="4" placeholder="Message.." name="message"
                         maxlength="500" required></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="category">Category</label>
-                    <select class="form-control" id="category">
-                        <option>Please Choose A Category</option>
-                        <option>Chemical waste</option>
-                        <option>Air pollution</option>
-                        <option>Water pollution</option>
-                        <option>Land pollution</option>
+                    <select class="form-control" name="category" id="category" required>
+                        <option value="">Please Choose A Category</option>
+                        <option value="Chemical Waste">Chemical waste</option>
+                        <option value="Air Pollution">Air pollution</option>
+                        <option value="Water Pollution">Water pollution</option>
+                        <option value="Land Pollution">Land pollution</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="category">Rating</label>
-                    <select class="form-control" id="rating">
-                        <option>Please Choose A Rating</option>
+                    <select class="form-control" name="rating" id="rating" required>
+                        <option value="">Please Choose A Rating</option>
                         <option value="1">1 (least concern)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -123,7 +122,7 @@
                         <option value="5">5 (most concern)</option>
                     </select>
                 </div>
-                <button id="submitButton" type="submit" class="btn btn-success">Submit</button>
+                <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </form>
@@ -147,7 +146,12 @@
     </div>
 </div>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <script src="/js/reports.js"></script>
+{{!-- <script>
+    $("#reportForm").validate();
+</script> --}}
 <script>
     $("#report").addClass("active");
 </script>

@@ -27,3 +27,23 @@ i{
 .card{
     width: 100%
 }
+
+.searchButton {
+    margin-top: 4px;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.moreSearch {
+    white-space: unset;
+}
+
+#run-search {
+    margin-left: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#clear-all {
+    margin-left: 0;
+}
