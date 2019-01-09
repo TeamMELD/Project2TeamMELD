@@ -5,6 +5,17 @@ $(document).ready(function () {
         event.preventDefault();
         console.log("In submit")
         
+        //jQuery validation - this script not needed
+        // $("#reportForm").validate({
+        //     rules: {
+        //         state: {
+        //             required: true
+        //         },
+        //         category: {
+        //             required: true
+        //         }
+        //     }
+        // });
 
         let newReport = {
             username: $("#username").val().trim(),
@@ -16,7 +27,8 @@ $(document).ready(function () {
             categories: $("#category").val().trim(),
             rating: parseFloat($("#rating").val().trim())
         };
-       
+        
+
          console.log(newReport);
 
         //Ajax call to post report back into the database
