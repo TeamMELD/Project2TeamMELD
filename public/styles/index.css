@@ -1,9 +1,9 @@
-#card {
+.card {
     border: 1px solid #2C7873;
     border-radius: 5px;
     display: block;
     margin: 10px auto;
-    width: 33%;
+    /*width: 33%;*/
 }
   
 #index-container{

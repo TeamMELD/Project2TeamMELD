@@ -63,6 +63,12 @@ background: linear-gradient(to right, #2c7873 0%,#dbfbe0 19%,#ffffff 32%,#ffffff
   border-color:#dbfbe0;
 }
 
+.navbar-toggler:not(.disabled) {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+}
+
 #banner-logo {
   display: block;
   margin-left: auto;
