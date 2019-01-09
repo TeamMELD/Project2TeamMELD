@@ -3,11 +3,11 @@
 <div class="container" id="search-container">
     <div id="accordion">
         <div class="card" id="accordion-layout">
-            <div class="card-header" id="headingOne">
+            <div class="card-header col-sm-12" id="headingOne">
 
                 <h5 class="mb-0">
 
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    <button class="btn btn-link" id="topSearch" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                         aria-controls="collapseOne">
                         Search for Environmental Violation by Location
                     </button>
@@ -29,11 +29,11 @@
                                 <div class="card-body">
                                     <form>
                                         <div class="form-row">
-                                            <div class="col-8">
+                                            <div class="col-md-8">
                                                 <input type="text" id="input-city" class="form-control" placeholder="City">
                                             </div>
-                                            <div class="col-4">
-                                                <button type="button" id="search-city" class="btn btn-primary">Search
+                                            <div class="col-md-4">
+                                                <button type="button" id="search-city" class="btn btn-primary searchButton">Search
                                                     by City</button>
                                             </div>
                                         </div>
@@ -41,7 +41,7 @@
                                             <i>--OR--</i>
                                         </div>
                                         <div class="form-row">
-                                            <div class="col-8">
+                                            <div class="col-md-8">
                                                 <select class="form-control" id="input-state">
                                                     <option>State</option>
                                                     <option>AL</option>
@@ -106,8 +106,8 @@
                                                     <option>VI</option>
                                                 </select>
                                             </div>
-                                            <div class="col-4">
-                                                <button type="button" id="search-state" class="btn btn-primary">Search
+                                            <div class="col-md-4">
+                                                <button type="button" id="search-state" class="btn btn-primary searchButton">Search
                                                     by State</button>
                                             </div>
                                         </div>
@@ -115,11 +115,11 @@
                                             <i>--OR--</i>
                                         </div>
                                         <div class="form-row">
-                                            <div class="col">
+                                            <div class="col-md-8">
                                                 <input type="text" id="input-zip" class="form-control" placeholder="Zipcode">
                                             </div>
-                                            <div class="col-4">
-                                                <button type="button" id="search-zip" class="btn btn-primary">Search by
+                                            <div class="col-md-4">
+                                                <button type="button" id="search-zip" class="btn btn-primary searchButton">Search by
                                                     Zipcode</button>
                                             </div>
                                         </div>

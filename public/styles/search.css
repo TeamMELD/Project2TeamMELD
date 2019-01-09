@@ -27,3 +27,11 @@ i{
 .card{
     width: 100%
 }
+
+.searchButton {
+    margin-top: 4px;
+}
+
+#topSearch {
+    white-space: unset;
+}
