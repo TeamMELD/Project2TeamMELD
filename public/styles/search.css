@@ -35,6 +35,7 @@ i{
 }
 
 .moreSearch {
+    margin-left: 0;
     white-space: unset;
 }
 
@@ -46,4 +47,9 @@ i{
 
 #clear-all {
     margin-left: 0;
+}
+
+#headingOne, #headingTwo {
+    background: #dbfbe0;
+    padding-left: 0;
 }
