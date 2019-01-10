@@ -18,8 +18,8 @@ body {
 .navbar-light,
 .bg-light {
   /*background: #dbfbed; testing transparency*/
-   background:transparent; 
-} 
+  background: transparent;
+}
 
 .btn-primary {
   background-color: #374897 !important;
@@ -31,36 +31,50 @@ body {
   opacity: 0.75;
 }
 
-
 .navbar-light .navbar-nav .nav-link {
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
   color: #2c7873;
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
   color: #374897;
 }
 
-/*nav {
+/*alternative gradients for nav
+nav {
   background: linear-gradient(to right, #ffffff 2%,#dbfbe0 15%,#dbfbe0 15%,#dbfbe0 52%,#4d7775 100%)!important;
 
 }
 nav {
   background: linear-gradient(to right, #dbfbe0 1%,#ffffff 29%,#dbfbe0 41%,#dbfbe0 52%,#2c7873 100%)!important;
-}*/
+}
+*/
+
 nav {
-background: linear-gradient(to right, #2c7873 0%,#dbfbe0 19%,#ffffff 32%,#ffffff 44%,#dbfbe0 54%,#dbfbe0 66%,#2c7873 100%)!important;
+  background: linear-gradient(
+    to right,
+    #2c7873 0%,
+    #dbfbe0 19%,
+    #ffffff 32%,
+    #ffffff 44%,
+    #dbfbe0 54%,
+    #dbfbe0 66%,
+    #2c7873 100%
+  ) !important;
 }
 
 .navbar-light .navbar-toggler {
-  border-color:#374897;
+  border-color: #374897;
 }
 
 .navbar-light .navbar-toggler:hover {
-  border-color:#dbfbe0;
+  border-color: #dbfbe0;
 }
 
 .navbar-toggler:not(.disabled) {
@@ -86,16 +100,6 @@ background: linear-gradient(to right, #2c7873 0%,#dbfbe0 19%,#ffffff 32%,#ffffff
   padding-bottom: 40px;
 }
 
-/* @media (min-width: 768px){
-.container {
-    max-width: 720px;
-}}
-
-@media (min-width: 992px) {
-.container {
-    max-width: 960px;
-}} */
-
 footer {
   width: 100%;
   line-height: 1;
@@ -116,24 +120,28 @@ hr {
 
 @media (min-width: 576px) {
   hr {
-      max-width: 540px;
-  }}
+    max-width: 540px;
+  }
+}
 
-  @media (min-width: 768px) {
-    hr {
-        max-width: 720px;
-    }}
-
-    @media (min-width: 992px) {
-      hr {
-          max-width: 960px;
-      }}
-
-@media (min-width: 1200px){
+@media (min-width: 768px) {
   hr {
-      max-width: 1140px;
-  }}
-  
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  hr {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  hr {
+    max-width: 1140px;
+  }
+}
+
 html {
   height: 100%;
   margin: 0;
