@@ -24,7 +24,7 @@
 
 ## Technical Requirements
 * HTML/HTML5
-* HTML5 validation
+* jQuery validation
 * Bootstrap/CSS
 * Javascript
 * Node.JS 
