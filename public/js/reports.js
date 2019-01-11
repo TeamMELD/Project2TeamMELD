@@ -30,6 +30,15 @@ $(document).ready(function () {
                 console.log("New report is on database woohoo!");
 
             })
+
+            $("#username").val("");
+            $("#address").val("");
+            $("#city").val("");
+            $("#state").val("");
+            $("#zipcode").val("");
+            $("#violationDescription").val("");
+            $("#category").val("");
+            $("#rating").val("")
         }
     })
 })
